@@ -1,0 +1,12 @@
+{
+    "rewrites": [
+        {
+            "source": "/career",
+            "destination": "/career.html"
+        },
+        {
+            "source": "/research",
+            "destination": "/research.html"
+        }
+    ]
+}

@@ -1,0 +1,114 @@
+.career-container {
+    min-height: 100vh;
+    background-color: #000;
+    color: #fff;
+    position: relative;
+}
+
+/* Particle Canvas */
+#particle-canvas {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    margin-top: 0;
+}
+
+/* Timeline */
+.timeline-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 80px auto 0;
+    padding: 0 60px 100px;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #fff;
+    transform: translateX(-50%);
+}
+
+.timeline-entries {
+    position: relative;
+}
+
+.timeline-entry {
+    position: relative;
+    margin-bottom: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.timeline-entry.right {
+    margin-left: calc(50% + 50px);
+}
+
+.timeline-entry.left {
+    margin-right: calc(50% + 50px);
+    align-items: flex-end;
+    text-align: right;
+}
+
+.timeline-entry .year {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 700;
+    font-size: 24pt;
+    margin-bottom: 12px;
+    color: #fff;
+}
+
+.timeline-entry .description {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+}
+
+.timeline-entry.left .description {
+    align-items: flex-end;
+}
+
+.timeline-link {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 300;
+    font-size: 14pt;
+    color: #fff;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.timeline-link:hover {
+    opacity: 0.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .timeline-container {
+        padding: 0 30px 80px;
+    }
+
+    .timeline-entry.right,
+    .timeline-entry.left {
+        padding-left: calc(50% + 60px);
+        padding-right: 0;
+        text-align: left;
+        justify-content: flex-start;
+    }
+
+    .timeline-entry.left .description {
+        align-items: flex-start;
+    }
+
+    .timeline-entry .year {
+        font-size: 20pt;
+    }
+
+    .timeline-link {
+        font-size: 12pt;
+    }
+}
